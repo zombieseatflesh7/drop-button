@@ -16,7 +16,7 @@ using UnityEngine;
 
 namespace DropButton;
 
-[BepInPlugin("com.dual.drop-button", "Drop Button", "1.1.3")]
+[BepInPlugin("com.dual.drop-button", "Drop Button", "1.1.4")]
 sealed class Plugin : BaseUnityPlugin
 {
     sealed class PlayerData { public PhysicalObject track; public int timer; }
@@ -178,7 +178,7 @@ sealed class Plugin : BaseUnityPlugin
 
             // Navigate to the bool that decides whether or not to drop items
             cursor.Index = cursor.Body.Instructions.Count - 1;
-            cursor.GotoPrev(MoveType.After, i => i.MatchLdloc(44));
+            cursor.GotoPrev(MoveType.After, i => i.MatchLdloc(43));
             cursor.Emit(OpCodes.Ldarg_0);
             cursor.EmitDelegate(ShouldRelease);
 

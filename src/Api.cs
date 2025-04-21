@@ -7,7 +7,7 @@ public static class Api
 {
     public delegate bool OnDropDelegate(Player player, bool eu);
 
-    public static readonly PlayerKeybind Drop = PlayerKeybind.Register("dropbutton:dropbutton", "Drop Button", "Drop", KeyCode.C, KeyCode.JoystickButton3);
+    public static readonly PlayerKeybind Drop = PlayerKeybind.Register("dropbutton:dropbutton", "Drop Button", "Drop", KeyCode.LeftControl, KeyCode.None);
 
     public static event OnDropDelegate OnDrop;
 
